@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Summerizer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      margin: 0;
+      width: 300px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .note {
+      font-size: 12px;
+      color: #888;
+      margin-top: 10px;
+    }
+
+    .error {
+      color: red;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Set Hugging Face API Key</h1>
+  <p>
+    To use the Hugging Face model, you need an API key. Follow these steps to obtain your API key:
+  </p>
+  <ol>
+    <li>Visit the <a href="https://huggingface.co/settings/tokens" target="_blank">Hugging Face API Tokens Page</a>.</li>
+    <li>Log in or create an account if you don’t have one.</li>
+    <li>Generate a new token if you don’t already have one.</li>
+    <li>Copy the token and paste it below.</li>
+  </ol>
+  <input type="text" id="apikey" placeholder="Enter your API key here">
+  <button id="save-btn">Save API Key</button>
+  <div id="error-msg" class="error"></div>
+  <div class="note">
+    Your API key will be stored securely and used to access Hugging Face models.
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
